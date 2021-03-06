@@ -4,16 +4,36 @@
 	{
 		public byte[] DeCrypt(byte[] data)
 		{
-			//Code zum verschlüsseln
+			for (int i = 0; i < data.Length; i++)
+			{
+				if (i % 2 == 0)
+				{
+					data[i]++;
+				}
+				else
+				{
+					data[i]--;
+				}
+			}
 
-			return null;
+			return data;
 		}
 
 		public byte[] EnCrypt(byte[] data)
 		{
-			//Code zum entschlüsseln
+			for (int i = 0; i < data.Length; i++)
+			{
+				if (i % 2 == 0)
+				{
+					data[i]--;
+				}
+				else
+				{
+					data[i]++;
+				}
+			}
 
-			return null;
+			return data;
 		}
 	}
 }
